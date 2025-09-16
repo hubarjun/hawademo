@@ -8,7 +8,7 @@
 body {
   padding: 0;
   background-color: #0b0b0b;
-  background: url("../hawademo/images/BackgroundHAWA.png");
+  background: url("/hawademo/images/BackgroundHAWA.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,7 +113,7 @@ button:focus {
   border: none;
 }
 #customARButton::before {
-  content: url("../hawademo/images/arrow.png");
+  content: url("/hawademo/images/arrow.png");
   position: absolute;
   left: -50px;
   width: 50%;
