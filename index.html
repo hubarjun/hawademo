@@ -14,6 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <script
       src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
       defer
@@ -22,21 +23,24 @@
       document.addEventListener("DOMContentLoaded", () => {
         const arButton = document.querySelector("#customARButton");
         const modelViewer = document.querySelector("model-viewer");
+        const loading_screen = document.querySelector(".loading_screen");
         arButton.addEventListener("click", () => {
           modelViewer.activateAR();
+        });
+        modelViewer.addEventListener("load", function () {
+          document.querySelector(".loading_screen").style.display = "none";
         });
       });
     </script>
   </head>
 
   <body>
-    <header>
-      <a href="https://www.heyareweare.com/"
-        ><img
-          src="images/Heyareweare_Technologies_Logo.png"
-          alt="heyAreWeAre Technologies"
-      /></a>
-    </header>
+    <div class="loading_screen">
+      <div>
+        <img src="/images/vijaytvlogo.png" alt="vijaytv" />
+      </div>
+    </div>
+
     <div class="container">
       <model-viewer
         src="models/chamundi_dev_test.glb"
