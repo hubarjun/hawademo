@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HeyAreWeAre Technologies</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../hawademo/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const arButton = document.querySelector("#customARButton");
+        const modelViewer = document.querySelector("model-viewer");
+        arButton.addEventListener("click", () => {
+          modelViewer.activateAR();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="https://www.heyareweare.com/"
+        ><img
+          src="/hawademo/images/Heyareweare_Technologies_Logo.png"
+          alt="heyAreWeAre Technologies"
+      /></a>
+    </header>
+    <div class="container">
+      <model-viewer
+        src="../hawademo/models/chamundi_dev_test.glb"
+        alt="chamundidevi"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+      >
+        <button class="arbutton" slot="ar-button">
+          <img
+            src="https://cdn.glitch.global/d7982878-6661-49f5-82f8-6eb1c737aedd/HAWALOGO?v=1727203855839"
+            alt="HeyAreWeAre Technologies"
+          />
+          <p>Launch AR</p>
+        </button>
+      </model-viewer>
+
+      <section class="attribution">
+        <h1>Chamundidevi</h1>
+        <p>Learn, explore, engage. Immersive learning, redefined.</p>
+      </section>
+      <button id="customARButton">
+        <p>Launch AR</p>
+      </button>
+      <p id="cursive">experience ' Augmented Reality '</p>
+    </div>
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://api.whatsapp.com/send?phone=919043126018"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="https://www.linkedin.com/company/heyareweare"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://x.com/heyareweare"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="https://www.youtube.com/@heyareweare"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/heyareweare/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.facebook.com/heyareweare/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
